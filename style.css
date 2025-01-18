@@ -1,0 +1,378 @@
+@font-face {
+    font-family: 'IRANSansWeb';
+    src: url('../fonts/IRANSansWeb\(FaNum\).woff') format('woff');
+}
+
+body {
+    font-family: 'IRANSansWeb', Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    direction: rtl;
+    padding-bottom: env(safe-area-inset-bottom);
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+/* Progress Steps */
+.steps-container {
+    position: relative;
+    margin: 1.5rem auto;
+    margin-bottom: 0px;
+
+}
+
+.steps-line {
+    position: absolute;
+    top: 17px;
+    right: 30px;
+    left: 30px;
+    height: 2px;
+    background-color: #e9ecef;
+    z-index: 1;
+}
+
+.steps-line-active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 66%;
+    height: 100%;
+    background-color: #4CAF50;
+}
+
+.steps {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+    font-size: 12px;
+}
+
+.step-circle.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.step-text {
+    font-size: 10px;
+    text-align: center;
+}
+
+/* Lock Animation */
+.Purchase-lock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding: 1rem;
+}
+
+.Purchase-lock img {
+    max-width: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+
+/* Basic card */
+.basic-card {
+    display: block;
+    border: 3px solid transparent;
+    border-radius: 22px;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(90deg, rgba(109, 103, 252, 1) 0%, rgba(93, 209, 245, 1) 100%) border-box;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    transition: transform 0.2s;
+    padding: 1rem;
+}
+
+.basic-card:hover {
+    transform: scale(1.02);
+}
+
+.basic-card:active {
+    transform: scale(0.98);
+}
+
+.basic-card span {
+    margin-bottom: 8px;
+}
+
+.basic-card-title-text {
+    font-size: 20px;
+    color: rgba(93, 209, 245, 1);
+    width: 100%;
+    font-weight: bold;
+}
+
+.basic-card-title-text i {
+    color: rgba(109, 103, 252, 1)
+}
+
+.basic-card-text {
+    font-size: 14px;
+    background: linear-gradient(90deg, rgba(109, 103, 252, 1) 0%, rgba(93, 209, 245, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    width: 100%;
+}
+
+/* Pro card */
+.pro-card-container{
+ height: 185px;
+}
+.pro-card {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid transparent;
+    border-radius: 22px;
+    background: linear-gradient(90deg, rgba(109, 103, 252, 1) 0%, rgba(93, 209, 245, 1) 100%) padding-box,
+        linear-gradient(90deg, rgba(109, 103, 252, 1) 0%, rgba(93, 209, 245, 1) 100%) border-box;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s;
+    padding-right: 0px;
+    padding-left: 0px;
+    height: 170px;
+
+}
+
+.pro-card:hover {
+    transform: scale(1.02);
+}
+
+.pro-card:active {
+    transform: scale(0.98);
+}
+
+.pro-card-header {
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pro-card-Timer-and-Price {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.pro-card-text-price {
+    display: inline-flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: white;
+    font-size: 8px;
+}
+
+.pro-card-price {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+.pro-card-TAP {
+    gap: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+.discount-badge {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-Items: center;
+    flex-shrink: 0;
+    background-color: rgb(233, 0, 113);
+    border-radius: 10px;
+    color: white;
+    font-size: 10px;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.timer-box {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: rgb(233, 0, 113);
+    border-radius: 8px;
+    color: white;
+    font-size: 10px;
+    padding: 4px;
+}
+
+.timer-separator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separator-t {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    height: 3px;
+    width: 15px;
+    background: white;
+    margin: 0 5px;
+}
+
+
+.separator {
+    border: none;
+    border-radius: 10px;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255,1);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.subscription-options {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    top: -72px;
+  padding: 0px 30px;
+}
+
+.subscription-btn {
+    background: white;
+    color:  rgba(109, 103, 252, 1);
+    border: none;
+    border-radius: 18px;
+    width: 100%;
+    font-size: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    
+}
+
+
+.subscription-btn.active {
+    background-color: rgb(40, 95, 243);
+    color: white;
+}
+
+.subscription-options button {
+    pointer-events: auto;
+    /* دکمه‌های داخلی قابل کلیک باقی می‌مانند */
+}
+.subscription-options button:hover {
+    opacity: 0.8;
+}
+/* purchase-btn */
+.purchase-btn {
+    background-color: rgb(40, 95, 243);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 0.75rem;
+    width: 100%;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.purchase-btn:hover {
+transform: scale(1.02);
+}
+
+.purchase-btn:active {
+transform: scale(0.98);
+}
+
+.app-icons {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: -16px;
+    width: 100vw; /* Use viewport width */
+}
+
+.app-icons img {
+    max-width: 100%;
+    width: 100vw; /* Use viewport width */
+    height: auto;
+    display: block;
+}
+
+/* iPhone-specific styles */
+@supports (-webkit-touch-callout: none) {
+    body {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    .purchase-btn {
+        margin-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+@media (min-width: 300px) {
+    body {
+        font-size: 16px;
+    }
+
+    .step-circle {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .step-text {
+        font-size: 12px;
+    }
+
+    .time-badge {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
+    }
+
+    .subscription-btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
