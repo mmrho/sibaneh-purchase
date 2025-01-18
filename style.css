@@ -7,7 +7,6 @@ body {
     font-family: 'IRANSansWeb', Arial, Helvetica, sans-serif;
     background-color: rgb(255, 255, 255);
     direction: rtl;
-    padding-bottom: env(safe-area-inset-bottom);
     font-size: 14px;
     margin: 0;
     padding: 0;
@@ -18,15 +17,23 @@ body {
     max-width: 100%;
     padding-left: 15px;
     padding-right: 15px;
-
+    min-height: 100vh; /* This makes it responsive to viewport height */
+    height: auto; /* Allows content to expand naturally */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Progress Steps */
 .steps-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     position: relative;
     margin: 1.5rem auto;
+    margin-top: 0px;
     margin-bottom: 0px;
-
+    padding: 0px 15px;
 }
 
 .steps-line {
@@ -52,6 +59,7 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     z-index: 2;
 }
 
@@ -59,6 +67,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .step-circle {
@@ -327,17 +336,18 @@ transform: scale(0.98);
 }
 
 .app-icons {
+    display: flex;
     margin-left: -15px;
     margin-right: -15px;
-    margin-bottom: -16px;
-    width: 100vw; /* Use viewport width */
+    margin-bottom: -15px;
+    width: 100vw;
+    display: block;
 }
 
 .app-icons img {
-    max-width: 100%;
-    width: 100vw; /* Use viewport width */
-    height: auto;
+    width: 100%;
     display: block;
+    width: 100%;
 }
 
 /* iPhone-specific styles */
